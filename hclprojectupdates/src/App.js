@@ -1,10 +1,10 @@
 import React from "react";
-import BorderExample from "./components/processing";
+
 
 function App(){
     return(
         <div>
-        <BorderExample/>
+        <h1>Hi</h1>
         </div>
     );
 }

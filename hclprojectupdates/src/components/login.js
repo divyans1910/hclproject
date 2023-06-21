@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Button, Row, Container, Card, Form } from "react-bootstrap";
 
 export default function Login() {
+  const [email,setEmail] = useState('')
+  const [password, setPassword] = useState('')
   return (
     <div>
       <Container>
@@ -14,12 +16,12 @@ export default function Login() {
                   <h2 className="fw-bold mb-2 text-uppercase" >Login Page</h2>
                   <p className=" mb-5">For any issues, contact 1800-3000-9009</p>
                   <div className="mb-3">
-                    <Form>
+                    <Form >
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label className="text-center">
                           Email address
                         </Form.Label>
-                        <Form.Control type="email" placeholder="Enter email" />
+                        <Form.Control type="email" placeholder="Enter email"  />
                       </Form.Group>
 
                       <Form.Group
@@ -27,7 +29,7 @@ export default function Login() {
                         controlId="formBasicPassword"
                       >
                         <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" placeholder="Password" />
+                        <Form.Control type="password" placeholder="Password"  />
                       </Form.Group>
                       <Form.Group
                         className="mb-3"
