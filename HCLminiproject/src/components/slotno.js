@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./slotno.css"
 
 const Slotno = () => {
@@ -10,18 +11,24 @@ const Slotno = () => {
 	};
 
 	const handleClick = () => {
-		setNum(randomNumberInRange(1, 500));
+		setNum(randomNumberInRange(1, 100));
 	};
 
 	return (
 		<div className="wrapper">
-			<h2>Slot Number: {num}</h2>
+			<h2>Slot Number: {num} </h2>
+            
 			<button onClick={handleClick}>
 				Generate
 			</button>
+			
+			<Link to="/entextnew">
             <button>
 				Continue
 			</button>
+			</Link>
+			
+			
 		</div>
 	);
 };

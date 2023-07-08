@@ -18,12 +18,10 @@ function GroupExample() {
       </Card>
       <Card>
         <Card.Body>
-          <Card.Title>3 Wheeler</Card.Title>
+          <Card.Title>About us</Card.Title>
           <Card.Text>
-            <ul>
-                <li>Flat Rate Rs. 30/-</li>
-                <li>24/7 Security</li>
-            </ul>
+           This web application was made from a parking lot employee's perspective. It was designed to be easy to use even in rush hours.
+           The buttons, information page were designed for easy and fast usage. 
           </Card.Text>
         </Card.Body>
       </Card>

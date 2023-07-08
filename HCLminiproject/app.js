@@ -1,5 +1,6 @@
 const express = require("express")
 const collection = require("./mongo")
+const collection1 = require("./mongo1")
 const cors = require("cors")
 const app = express()
 app.use(express.json())
@@ -60,6 +61,55 @@ app.post("/signup",async(req,res)=>{
     }
 
 })
+
+app.post("/exitdetails",async(req,res)=>{
+    const{vehicleno,phoneno}=req.body
+
+    try{
+        const check=await collection1.findOne({vehicleno:vehicleno})
+
+        if(check){
+            res.json("exist")
+        }
+        else{
+            res.json("notexist")
+        }
+
+    }
+    catch(e){
+        res.json("fail")
+    }
+
+})
+
+
+
+app.post("/entrydetails",async(req,res)=>{
+    const{vehicleno,phoneno}=req.body
+
+    const data={
+        vehicleno:vehicleno,
+        phoneno:phoneno
+    }
+
+    try{
+        const check=await collection1.findOne({vehicleno:vehicleno})
+
+        if(check){
+            res.json("exist")
+        }
+        else{
+            res.json("notexist")
+            await collection1.insertMany([data])
+        }
+
+    }
+    catch(e){
+        res.json("fail")
+    }
+
+})
+
 
 app.listen(8000,()=>{
     console.log("port connected");

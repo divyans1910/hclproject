@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import axios from "axios"
 import { useNavigate, Link } from "react-router-dom"
+import './/login.css'
 
 
 function Login() {
@@ -19,15 +20,15 @@ function Login() {
                 email,password
             })
             .then(res=>{
-                if(res.data=="exist"){
+                if(res.data ==="exist"){
                     history("/entext",{state:{id:email}})
                 }
-                else if(res.data=="notexist"){
-                    alert("User have not sign up")
+                else if(res.data ==="notexist"){
+                    alert("Account doesnot  exist, please Signup")
                 }
             })
             .catch(e=>{
-                alert("wrong details")
+                alert("Invalid, Please try again")
                 console.log(e);
             })
 
@@ -42,22 +43,17 @@ function Login() {
 
     return (
         <div className="login">
-
-            <h1>Login</h1>
-
+        <div className="containerlogin">
+        <div class="card">
+            <h2>Login</h2>
             <form action="POST">
-                <input type="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="Email"  />
-                <input type="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="Password"  />
+                <input id="username" type="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="Email"  />
+                <input id="password" type="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="Password"  />
                 <input type="submit" onClick={submit} />
-
             </form>
-
-            <br />
-            <p>OR</p>
-            <br />
-
-            <Link to="/signup">Signup Page</Link>
-
+            <div class="switch">Don't have an account? <Link to="/signup">Signup here</Link></div>
+            </div>
+            </div>
         </div>
     )
 }
