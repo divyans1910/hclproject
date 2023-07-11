@@ -13,6 +13,7 @@ import EntryExitNew from "./components/entextnew";
 import Success from "./components/success";
 import Bill from "./components/bill";
 import Billc from "./components/billc";
+import Buttonsent from "./components/buttonsent";
 
 
 function App(){
@@ -34,6 +35,7 @@ function App(){
             <Route path="success" element={<Success/>}/>
             <Route path="bill" element={<Bill/>}/>
             <Route path="billc" element={<Billc/>}/>
+            <Route path="buttonsent" element={<Buttonsent/>}/>
          </Routes>
         </div>
         </div>

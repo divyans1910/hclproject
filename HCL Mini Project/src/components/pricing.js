@@ -20,8 +20,8 @@ function GroupExample() {
         <Card.Body>
           <Card.Title>About us</Card.Title>
           <Card.Text>
-           This web application was made from a parking lot employee's perspective. It was designed to be easy to use even in rush hours.
-           The buttons, information page were designed for easy and fast usage. 
+           This web application was made from a Indian parking lot employee's perspective. It was designed to be easy to use even in rush hours.
+           The buttons, information page are designed for easy and fast usage. 
           </Card.Text>
         </Card.Body>
       </Card>

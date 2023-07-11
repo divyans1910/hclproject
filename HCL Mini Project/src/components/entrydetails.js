@@ -3,11 +3,14 @@ import axios from "axios"
 import { useNavigate} from "react-router-dom"
 import ".//login.css"
 
+
+
 function Entrydetails() {
     const history=useNavigate();
 
     const [vehicleno,setVehicleno]=useState('')
     const [phoneno,setPhoneno]=useState('')
+    
 
     async function submit(e){
         e.preventDefault();
@@ -18,11 +21,11 @@ function Entrydetails() {
                 vehicleno,phoneno
             })
             .then(res=>{
-                if(res.data ==="exist"){
-                    history("/slotno")
+                if(res.data ==="exist" && phoneno.length === 10 && vehicleno.length > 0){
+                    history("/buttonsent")
                 }
-                else if(res.data ==="notexist"){
-                    history("/slotno",{state:{id:vehicleno}})
+                else if(res.data === "notexist" && phoneno.length === 10  && vehicleno.length > 0){
+                    history("/buttonsent",{state:{id:vehicleno}})
                 }
             })
             .catch(e=>{
@@ -39,6 +42,7 @@ function Entrydetails() {
     }
 
 
+
     return (
         <div className="entrydetails">
         <div className="containerlogin">
@@ -46,10 +50,9 @@ function Entrydetails() {
             <h1>Entry Details</h1>
 
             <form action="POST">
-                <input id="username" type="text" onChange={(e) => { setVehicleno(e.target.value) }} placeholder="Vehicle Number"  />
-                <input id="password" type="number" onChange={(e) => { setPhoneno(e.target.value) }} placeholder="Phone Number" />
+                <input required type="text"  onChange={(e) => { setVehicleno(e.target.value) }} placeholder="Name"  />
+                <input required type="tel" onChange={(e) => { setPhoneno(e.target.value) }} placeholder="10 Digit Phone Number"  />
                 <input type="submit" onClick={submit} />
-
             </form>
             
             </div>

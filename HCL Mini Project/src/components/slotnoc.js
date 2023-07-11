@@ -11,7 +11,7 @@ const Slotno = () => {
 	};
 
 	const handleClick = () => {
-		setNum(randomNumberInRange(1, 100));
+		setNum(randomNumberInRange(401, 1000));
 	};
 
 	return (

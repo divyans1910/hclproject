@@ -47,7 +47,7 @@ function Exitdetails() {
         <div class="card">
             <h2>Exit Details</h2>
             <form action="POST">
-                <input id="username" type="text" onChange={(e) => { setVehicleno(e.target.value) }} placeholder="Vehicle Number"  />
+                <input id="username" type="text" onChange={(e) => { setVehicleno(e.target.value) }} placeholder="Name"  />
                 <input id="password" type="number" onChange={(e) => { setPhoneno(e.target.value) }} placeholder="Phone Number" />
                 <input type="submit" onClick={submit} /> 
             </form>

@@ -12,9 +12,9 @@ const newSchema1=new mongoose.Schema({
         type:String,
         required:true
     },
-    phoneno:{
-        type:Number,
-        required:true
+    phoneno: {
+        type: Number,
+        required:true,
     }
 })
 
