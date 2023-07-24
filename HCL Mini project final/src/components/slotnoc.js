@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./slotno.css"
 
-const Slotno = () => {
+const Slotnoc = () => {
 	const [num, setNum] = useState(0);
 
 	const randomNumberInRange = (min, max) => {
@@ -33,4 +33,4 @@ const Slotno = () => {
 	);
 };
 
-export default Slotno;
+export default Slotnoc;

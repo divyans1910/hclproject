@@ -14,7 +14,7 @@ import Success from "./components/success";
 import Bill from "./components/bill";
 import Billc from "./components/billc";
 import Buttonsent from "./components/buttonsent";
-
+import Slotnoc from "./components/slotnoc";
 
 function App(){
     return(
@@ -30,6 +30,7 @@ function App(){
             <Route path="exitdetails" element={<Exitdetails/>}/>
             <Route path="buttons" element={<Buttons/>}/>
             <Route path="slotno" element={<Slotno/>}/>
+            <Route path="slotnoc" element={<Slotnoc/>}/>
             <Route path="entextnew" element={<EntryExitNew/>} />
             <Route path="entext" element={<EntryExit/>} />
             <Route path="success" element={<Success/>}/>

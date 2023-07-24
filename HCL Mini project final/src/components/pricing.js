@@ -20,8 +20,13 @@ function GroupExample() {
         <Card.Body>
           <Card.Title>About us</Card.Title>
           <Card.Text>
-           This web application was made from a Indian parking lot employee's perspective. It was designed to be easy to use even in rush hours.
-           The buttons, information page are designed for easy and fast usage. 
+          A parking management system which is typically made for a <b>parking attendant</b> who has to ensure smooth and <b>fast flow of vehicles into a huge mall/lot.</b> 
+          Key features includes a <b>simple UI for ease and speed of access</b>, and a <b>slot number</b> to make the system more uniform and consistent.
+          <Card.Text>
+          <i>
+          Input: Vehicle Number ; Output: Slot Number
+          </i> 
+          </Card.Text>
           </Card.Text>
         </Card.Body>
       </Card>
